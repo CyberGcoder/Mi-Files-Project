@@ -2,9 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="refresh" content="0; url=./privacy-policy/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mi Files Legal</title>
+    <title>Mi Files</title>
     <style>
         :root {
             color-scheme: light;
@@ -14,6 +13,11 @@
             --muted: #516175;
             --line: #d9e2ec;
             --accent: #126c8a;
+            --accent-strong: #0d5a74;
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
@@ -28,25 +32,78 @@
         }
 
         main {
-            max-width: 720px;
+            width: min(760px, 100%);
             background: var(--card);
             border: 1px solid var(--line);
-            border-radius: 20px;
-            padding: 28px;
+            border-radius: 24px;
+            padding: 32px;
             box-shadow: 0 14px 32px rgba(18, 32, 51, 0.08);
-            text-align: center;
         }
 
-        a {
-            color: var(--accent);
+        h1 {
+            margin: 0 0 12px;
+            font-size: 2.2rem;
+            line-height: 1.1;
+        }
+
+        p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .button-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 24px;
+        }
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 46px;
+            padding: 0 18px;
+            border-radius: 999px;
+            border: 1px solid var(--line);
+            text-decoration: none;
+            color: var(--text);
+            background: #fff;
+            font-weight: 600;
+        }
+
+        .button.primary {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+
+        .button.primary:hover {
+            background: var(--accent-strong);
+            border-color: var(--accent-strong);
+        }
+
+        .meta {
+            margin-top: 28px;
+            padding-top: 20px;
+            border-top: 1px solid var(--line);
+            font-size: 0.96rem;
         }
     </style>
 </head>
 <body>
 <main>
     <h1>Mi Files</h1>
-    <p>Redirecting to the privacy policy...</p>
-    <p><a href="./privacy-policy/">Open the privacy policy</a></p>
+    <p>Local-first file transfer between Windows and Android over Wi-Fi or supported hotspot flows.</p>
+
+    <div class="button-row">
+        <a class="button primary" href="https://github.com/CyberGcoder/Mi-Files-Project/releases/latest">Download Mi Files for Windows</a>
+        <a class="button" href="./privacy-policy/">Privacy Policy</a>
+        <a class="button" href="./terms-of-use/">Terms of Use</a>
+    </div>
+
+    <p class="meta">The Windows download opens the latest GitHub release with the installer and portable build.</p>
 </main>
 </body>
 </html>
